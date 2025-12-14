@@ -4,7 +4,8 @@ load_dotenv()
 from app import create_app, db
 from app.models import User, LoanApplication
 
-app = create_app()
+def create_app():
+  app = Flask(__name__)
 
 @app.shell_context_processor
 def make_shell_context():
